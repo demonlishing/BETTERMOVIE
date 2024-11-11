@@ -34,7 +34,7 @@ def register_user():
     
     username = input("Digite o nome de usuário: ").lower()  # Salva o nome de usuário em caixa baixa
     email = input("Digite o email: ")
-    password = input("Digite a senha: ")
+    password = input("Digite a senha: ").lower()
 
     if username in users:
         print("Usuário já existe. Tente novamente.")
@@ -51,7 +51,7 @@ def login_user():
     users = load_users()
     
     username = input("Digite o nome de usuário: ").lower()  # Converte o nome de usuário digitado para caixa baixa
-    password = input("Digite a senha: ")
+    password = input("Digite a senha: ").lower()
 
     if username in users and users[username]['password'] == password:
         print("Login bem-sucedido!")
@@ -143,7 +143,7 @@ def save_movies(movies):
 # Função principal para o sistema
 def main():
     while True:
-        print("\n1. Cadastrar usuário")
+        print("\n1. Cadastro de usuário")
         print("2. Login")
         print("3. Sair")
         choice = input("Escolha uma opção: ")
